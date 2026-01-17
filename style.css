@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #4f46e5, #38bdf8);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 70px 10%;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  border-left: 5px solid #38bdf8;
+  padding-left: 15px;
+}
+
+/* ===== PROFILE ===== */
+.profile {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile img {
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid #38bdf8;
+}
+
+.profile p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ===== EDUCATION ===== */
+/* ===== EDUCATION FLIP CARDS ===== */
+.edu-flip-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.edu-flip-card {
+  width: 300px;
+  height: 240px;
+  perspective: 1200px;
+}
+
+.edu-flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.edu-flip-card:hover .edu-flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK */
+.edu-front,
+.edu-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* FRONT */
+.edu-front {
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  color: #020617;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.edu-front p {
+  color: #475569;
+}
+
+/* LOGO CIRCLE */
+.edu-logo {
+  width: 70px;
+  height: 70px;
+  background: #facc15;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.edu-logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* BACK */
+.edu-back {
+  background: linear-gradient(135deg, #1e293b, #020617);
+  color: #e5e7eb;
+  transform: rotateY(180deg);
+}
+
+.edu-back span {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.edu-back ul {
+  padding: 0;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.edu-back li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .edu-flip-card {
+    width: 90%;
+  }
+}
+
+
+
+/* ===== ADVANCED SKILLS ===== */
+/* ===== SKILLS MARQUEE ===== */
+.skills-marquee {
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e293b, #020617);
+  padding: 25px 0;
+  border-radius: 20px;
+  position: relative;
+}
+
+.skills-marquee-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
+/* pause animation on hover */
+.skills-marquee:hover .skills-marquee-track {
+  animation-play-state: paused;
+}
+
+/* skill card */
+.skill-card {
+  min-width: 160px;
+  padding: 18px 26px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e5e7eb;
+  border-radius: 14px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* hover effect */
+.skill-card:hover {
+  background: linear-gradient(135deg, #38bdf8, #4f46e5);
+  color: #020617;
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 20px 40px rgba(56,189,248,0.5);
+}
+
+/* marquee animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .skill-card {
+    min-width: 140px;
+    padding: 15px 20px;
+  }
+}
+
+
+/* ===== GITHUB ===== */
+.github img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #020617;
+  color: #94a3b8;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 50px 20px;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ===== WELCOME SCREEN ===== */
+#welcome-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #020617, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: hideWelcome 3.5s forwards;
+}
+
+#welcome-screen h1 {
+  font-size: 64px;
+  color: #38bdf8;
+  letter-spacing: 4px;
+  animation: zoomFade 3s ease;
+  text-align: center;
+}
+
+@keyframes zoomFade {
+  0% { opacity: 0; transform: scale(0.6); }
+  40% { opacity: 1; transform: scale(1); }
+  100% { opacity: 1; }
+}
+
+@keyframes hideWelcome {
+  0% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* ===== TYPEWRITER TEXT ===== */
+#type-text {
+  font-size: 18px;
+  line-height: 1.6;
+  min-height: 120px;
+  border-right: 3px solid #38bdf8;
+  padding-right: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}

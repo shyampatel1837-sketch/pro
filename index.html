@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shyam Patel | Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- WELCOME SCREEN -->
+<div id="welcome-screen">
+  <h1>SHYAM PATEL</h1>
+</div>
+
+
+<header>
+  <h1>My Profile</h1>
+  
+</header>
+
+<!-- PROFILE -->
+<section class="reveal">
+  <div class="profile">
+    <img src="image/WhatsApp Image 2026-01-16 at 22.04.04.jpeg" alt="Shyam Patel">
+    <p id="type-text"></p>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="reveal">
+  <h2 class="section-title">Education Journey</h2>
+
+  <div class="edu-flip-container">
+
+    <!-- SCHOOL -->
+    <div class="edu-flip-card">
+      <div class="edu-flip-inner">
+
+        <!-- FRONT -->
+        <div class="edu-front">
+          <div class="edu-logo">
+            <img src="image/WhatsApp Image 2026-01-16 at 23.09.35.jpeg" alt="School Logo">
+          </div>
+          <h3>SHREE NRISINGH SECONDARY SCHOOL</h3>
+          <p>Foundation of Learning</p>
+        </div>
+
+        <!-- BACK -->
+        <div class="edu-back">
+          <h3><a href="https://search.gurubaa.com/listing/shree-nrisingh-higher-secondary-school/" target="_blank">SHREE NRISINGH SECONDARY SCHOOL</a></h3>
+          <span>2009 – 2022</span>
+          <ul>
+            <li>Strong base in Mathematics & Science</li>
+            <li>Developed discipline & consistency</li>
+            <li>Early interest in technology</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COLLEGE -->
+    <div class="edu-flip-card">
+      <div class="edu-flip-inner">
+
+        <div class="edu-front">
+          <div class="edu-logo">
+            <img src="image/WhatsApp Image 2026-01-16 at 23.09.35 (2).jpeg" alt="College Logo">
+          </div>
+          <h3>URBANA SCHOOL OF SCIENCE</h3>
+          <p>Exploring Computer Science</p>
+        </div>
+
+        <div class="edu-back">
+          <h3><a href="https://www.urbana.edu.np/" target="_blank">URBANA SCHOOL OF SCIENCE</a></h3>
+          <span>2022 – 2024</span>
+          <ul>
+            <li>Learned core CS subjects</li>
+            <li>Hands-on academic projects</li>
+            <li>Improved problem-solving skills</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- UNIVERSITY -->
+    <div class="edu-flip-card">
+      <div class="edu-flip-inner">
+
+        <div class="edu-front">
+          <div class="edu-logo">
+            <img src="image/WhatsApp Image 2026-01-16 at 23.09.35 (1).jpeg" alt="University Logo">
+          </div>
+          <h3>JAIN UNIVERSITY</h3>
+          <p>Professional Growth Phase</p>
+        </div>
+
+        <div class="edu-back">
+          <h3><a href="https://set.jainuniversity.ac.in/" target="_blank">JAIN UNIVERSITY</a></h3>
+          <span>2024 – Present</span>
+          <ul>
+            <li>Web & Cloud specialization</li>
+            <li>Industry-ready mindset</li>
+            <li>Building real-world projects</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  
+
+<!-- GITHUB -->
+<section class="reveal github">
+  <h2 class="section-title">GitHub Stats</h2>
+  <a href="https://github.com/your-username" target="_blank">
+    <img src="https://github-readme-stats.vercel.app/api?username=your-username&show_icons=true&theme=tokyonight">
+  </a>
+</section>
+
+<!-- PROJECTS -->
+<section class="reveal">
+  <h2 class="section-title">Projects</h2>
+  <ul>
+    <li><a href="#" target="_blank">Interactive Portfolio Website</a></li>
+    <li><a href="#" target="_blank">Cloud Computing Project</a></li>
+  </ul>
+</section>
+
+<!-- SKILLS -->
+<section class="reveal">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-marquee">
+    <div class="skills-marquee-track">
+
+      <!-- Skill items -->
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">Cloud Computing</div>
+      <div class="skill-card">Responsive Design</div>
+      <div class="skill-card">UI / UX</div>
+      <div class="skill-card">Problem Solving</div>
+
+      <!-- Duplicate for infinite scroll -->
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">Cloud Computing</div>
+      <div class="skill-card">Responsive Design</div>
+      <div class="skill-card">UI / UX</div>
+      <div class="skill-card">Problem Solving</div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- CERTIFICATIONS -->
+<section class="reveal">
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="edu-card">
+    <h3>🚧 Under Development Phase</h3>
+    <p>
+      I am currently working on professional certifications related to
+      Web Development and Cloud Computing. This section will be updated soon.
+    </p>
+  </div>
+</section>
+
+
+<!-- SCROLL SCRIPT -->
+<script>
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
+
+/* TYPEWRITER EFFECT */
+const text = `My name is Shyam Patel.
+I am a B.Tech student passionate about Web Development, Cloud Computing,
+and building interactive, user-friendly applications.`;
+
+let index = 0;
+const speed = 40;
+const target = document.getElementById("type-text");
+
+function typeEffect() {
+  if (index < text.length) {
+    target.innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, speed);
+  }
+}
+
+/* Start typing after welcome screen */
+setTimeout(typeEffect, 3600);
+</script>
+
+</body>
+</html>
+
